@@ -18,6 +18,7 @@ const Slide = keyframes`
   }
 `;
 
+
 const StyledText = styled.span`
   top: 3px;
   height: 1.2em;
