@@ -1,30 +1,48 @@
 import { Link } from "react-router-dom";
 
+const Links = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Photography",
+    path: "/photography",
+  },
+  {
+    name: "Videography",
+    path: "/videography",
+  },
+  {
+    name: "Investment",
+    path: "/investment",
+  },
+  {
+    name: "Journal",
+    path: "/journal",
+  },
+  {
+    name: "About Us",
+    path: "/about",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+]
+
 const Header = () => {
   return (
     <div className="flex bg-midTan w-full justify-between p-5">
       <div className="flex gap-2">
-        <Link to="/" className="text-lightTan hover:text-tan">
-          Home
-        </Link>
-        <Link to="/about" className="text-lightTan hover:text-tan">
-          Photography
-        </Link>
-        <Link to="/about" className="text-lightTan  hover:text-tan">
-          Videography
-        </Link>
-        <Link to="/investment" className="text-lightTan  hover:text-tan">
-          Investment
-        </Link>
-        <Link to="/journal" className="text-lightTan  hover:text-tan">
-          Journal
-        </Link>
-        <Link to="/about" className="text-lightTan  hover:text-tan">
-          About Us
-        </Link>
-        <Link to="/contact" className="text-lightTan  hover:text-tan">
-          Contact Us
-        </Link>
+        {Links.map {
+          <Link
+            to={path}
+            className="text-lightTan drop-shadow-2xl hover:text-tan"
+          >
+            {name}
+          </Link>;
+        }
       </div>
       <div className="flex">
         <Link to="/">
