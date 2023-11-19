@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "gopher_black": ["gopher_black", "sans-serif"],
+        "gopher": ["gopher_black", "ariel", "sans-serif"],
+        "cryene": ["cryene", "ariel", "sans-serif"],
+        "philosopher": ["philosopher", "ariel", "sans-serif"],
+        "airhead": ["airhead", "ariel", "sans-serif"],
       },
     },
   },

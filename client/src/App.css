@@ -9,41 +9,27 @@
 }
 
 @font-face {
-  font-family: "gopher_black";
+  font-family: "gopher";
   src: url("./static/fonts/gopher-black-webfont.woff") format("woff");
 }
 
 @font-face {
-  font-family: "gopher_black";
-  src: url("./static/fonts/gopher-black-webfont.woff") format("woff");
+  font-family: "cryene";
+  src: url("./static/fonts/CyreneRegularAdvanced.woff") format("woff");
 }
 
 @font-face {
-  font-family: "gopher_black";
-  src: url("./static/fonts/gopher-black-webfont.woff") format("woff");
+  font-family: "philosopher";
+  src: url("./static/fonts/Philosopher-Regular.ttf");
 }
 
 @font-face {
-  font-family: "gopher_black";
-  src: url("./static/fonts/gopher-black-webfont.woff") format("woff");
+  font-family: "airhead";
+  src: url("./static/fonts/tayairhead-webfont.woff") format("woff");
 }
 
-@font-face {
-  font-family: "gopher_black";
-  src: url("./static/fonts/gopher-black-webfont.woff") format("woff");
-}
-
-@font-face {
-  font-family: "gopher_black";
-  src: url("./static/fonts/gopher-black-webfont.woff") format("woff");
-}
-
-@font-face {
-  font-family: "gopher_black";
-  src: url("./static/fonts/gopher-black-webfont.woff") format("woff");
-}
 
 * {
-  font-family: "gopher_black";
+  font-family: "philosopher";
 }
 
