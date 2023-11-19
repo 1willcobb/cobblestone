@@ -11,6 +11,7 @@ const Header = () => {
       <Link to="/journal">Journal</Link>
       <Link to="/about">About Us</Link>
       <Link to="/contact">Contact Us</Link>
+      <h1 className="font-gopher_black">Header HERE</h1>
     </div>
   );
 };
