@@ -29,20 +29,20 @@ const Links = [
     name: "Contact",
     path: "/contact",
   },
-]
+];
 
 const Header = () => {
   return (
     <div className="flex bg-midTan w-full justify-between p-5">
       <div className="flex gap-2">
-        {Links.map {
+        {Links.map((link) => (
           <Link
-            to={path}
+            to={link.path}
             className="text-lightTan drop-shadow-2xl hover:text-tan"
           >
-            {name}
-          </Link>;
-        }
+            {link.name}
+          </Link>
+        ))}
       </div>
       <div className="flex">
         <Link to="/">
