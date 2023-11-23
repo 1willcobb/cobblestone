@@ -43,10 +43,8 @@ const Header: React.FC = () => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
 
-      if (width < 600) {
+      if (width < 770) {
         setScreenSize("small");
-      } else if (width < 800) {
-        setScreenSize("medium");
       } else {
         setScreenSize("large");
       }
@@ -62,11 +60,9 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex bg-midTan w-full justify-between p-5">
+    <div className="flex bg-midTan w-full md:justify-between justify-center p-5">
       {screenSize === "small" ? (
-        <div>hey</div>
-      ) : screenSize === "medium" ? (
-        <div>medium</div>
+        <div className="flex mr-auto my-auto">hey</div>
       ) : (
         <div className="flex gap-2">
           {Links.map((link) => (
@@ -81,16 +77,30 @@ const Header: React.FC = () => {
         </div>
       )}
 
-      <div className="flex">
-        {}
-        <Link to="/">
-          <img
-            src={lettering}
-            alt="cobblestone logo in lettering format"
-            className="w-20"
-          />
-        </Link>
-      </div>
+      
+        {screenSize === "small" ? (
+          <div className="mr-auto">
+            <Link to="/">
+              <img
+                src={primary}
+                alt="cobblestone logo in lettering format"
+                className="w-14"
+              />
+            </Link>
+          </div>
+        ) : (
+          <div className="ml-auto">
+            <Link to="/">
+              <img
+                src={lettering}
+                alt="cobblestone logo in lettering format"
+                className="w-20"
+              />
+            </Link>
+          </div>
+        )
+        }
+      
     </div>
   );
 };
