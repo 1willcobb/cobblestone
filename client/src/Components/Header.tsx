@@ -39,9 +39,12 @@ const Header: React.FC = () => {
     "large"
   );
 
+  const [burgerMenu, setBurgerMenu] = useState(false);
+
   useEffect(() => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
+      setBurgerMenu(false);
 
       if (width < 770) {
         setScreenSize("small");
@@ -59,25 +62,35 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  return (
-    <div className="flex bg-midTan w-full md:justify-between justify-center p-5">
-      {screenSize === "small" ? (
-        <div className="flex mr-auto my-auto">hey</div>
-      ) : (
-        <div className="flex gap-2">
-          {Links.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="text-lightTan drop-shadow-2xl hover:text-tan whitespace-nowrap"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
+  const menu = () => {
+    setBurgerMenu(!burgerMenu);
+  };
 
-      
+  return (
+    <div>
+      <div className="flex bg-midTan w-full md:justify-between justify-center p-5">
+        {screenSize === "small" ? (
+          <div className="flex mr-auto my-auto">
+            {burgerMenu ? (
+              <button onClick={menu}>X</button>
+            ) : (
+              <button onClick={menu}>0</button>
+            )}
+          </div>
+        ) : (
+          <div className="flex gap-2">
+            {Links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="text-lightTan drop-shadow-2xl hover:text-tan whitespace-nowrap"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        )}
+
         {screenSize === "small" ? (
           <div className="mr-auto">
             <Link to="/">
@@ -98,9 +111,22 @@ const Header: React.FC = () => {
               />
             </Link>
           </div>
-        )
-        }
-      
+        )}
+      </div>
+      {burgerMenu && (
+        <div className="flex gap-8 flex-col bg-midTan h-100">
+          {Links.map((link) => (
+            <Link
+              key={link.name}
+              onClick={menu}
+              to={link.path}
+              className="text-lightTan drop-shadow-2xl hover:text-tan whitespace-nowrap"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
