@@ -1,7 +1,9 @@
+
+
 const CompanyVision = () => {
   return (
-    <div>
-      <h1>CompanyVision</h1>
+    <div className="bg-inherit">
+      <h1 className="bg-inherit">CompanyVisions</h1>
     </div>
   );
 };
