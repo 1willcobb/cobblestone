@@ -67,7 +67,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="flex max-w-100">
+    <div className="flex max-w-100 flex-col">
       <div className="flex bg-midTan w-full md:justify-between justify-center p-5">
         {screenSize === "small" ? (
           <div className="flex mr-auto my-auto bg-midTan">
