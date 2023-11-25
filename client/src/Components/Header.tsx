@@ -67,10 +67,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex max-w-100">
       <div className="flex bg-midTan w-full md:justify-between justify-center p-5">
         {screenSize === "small" ? (
-          <div className="flex mr-auto my-auto">
+          <div className="flex mr-auto my-auto bg-midTan">
             {burgerMenu ? (
               <button onClick={menu}>X</button>
             ) : (
@@ -78,12 +78,12 @@ const Header: React.FC = () => {
             )}
           </div>
         ) : (
-          <div className="flex gap-2">
+          <div className="flex gap-2 bg-midTan">
             {Links.map((link) => (
               <Link
-                key={link.name}
+                key={link.name} 
                 to={link.path}
-                className="text-lightTan drop-shadow-2xl hover:text-tan whitespace-nowrap"
+                className="text-lightTan hover:text-tan whitespace-nowrap bg-midTan"
               >
                 {link.name}
               </Link>
@@ -92,22 +92,22 @@ const Header: React.FC = () => {
         )}
 
         {screenSize === "small" ? (
-          <div className="mr-auto">
+          <div className="mr-auto bg-midTan">
             <Link to="/">
               <img
                 src={primary}
                 alt="cobblestone logo in lettering format"
-                className="w-14"
+                className="w-14 bg-midTan"
               />
             </Link>
           </div>
         ) : (
-          <div className="ml-auto">
+          <div className="ml-auto bg-midTan">
             <Link to="/">
               <img
                 src={lettering}
                 alt="cobblestone logo in lettering format"
-                className="w-20"
+                className="w-20 bg-midTan"
               />
             </Link>
           </div>
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
               key={link.name}
               onClick={menu}
               to={link.path}
-              className="text-lightTan drop-shadow-2xl hover:text-tan whitespace-nowrap"
+              className="text-lightTan hover:text-tan whitespace-nowrap bg-midTan"
             >
               {link.name}
             </Link>
