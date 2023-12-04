@@ -7,3 +7,4 @@ Completely Custom React Front End for an active media production company utilizi
 * CMS 
 * Node, express, mongo, graphql backend
 * Task manager
+* Interface
