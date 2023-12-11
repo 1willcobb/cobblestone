@@ -9,4 +9,4 @@ Completely Custom React Front End for an active media production company utilizi
 * Task manager
 * Interface
 * News
-* New Clients
+* New
